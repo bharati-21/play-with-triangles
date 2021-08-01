@@ -5,6 +5,7 @@ import { Angles } from "./Angles";
 import { FindHypotenuse } from "./FindHypotenuse";
 import { FindArea } from "./FindArea";
 import { ThirdAngle } from "./ThirdAngle";
+import { Footer } from "./Footer";
 
 const userMenu = {
   "Is Valid Triangle?": <Angles />,
@@ -25,7 +26,7 @@ export default function App() {
       <header className="hero container">
         <nav>
           <h3 className="author">
-            <a href="" target="_blank">
+            <a href="https://bharati-portfolio.netlify.app/" target="_blank">
               Bharati Subramanian
             </a>
           </h3>
@@ -55,6 +56,7 @@ export default function App() {
         </div>
       </header>
       <main className="main container">{userMenuChoice}</main>
+      <Footer />
     </div>
   );
 }
