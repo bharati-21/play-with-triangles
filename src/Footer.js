@@ -9,7 +9,7 @@ const url = {
 
 function Footer() {
   return (
-    <footer class="footer container">
+    <footer className="footer container">
       <ul>
         <li>
           <a href={url.GitHub} target="_blank">
