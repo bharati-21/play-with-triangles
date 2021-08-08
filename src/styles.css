@@ -125,7 +125,8 @@ input[type="number"] {
   border-radius: 0.5rem;
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[type="reset"] {
   display: block;
   min-width: 150px;
   margin: 1.5rem auto;
@@ -138,6 +139,17 @@ input[type="submit"] {
   border: none;
   border-radius: 0.5rem;
   transition: transform 0.2s ease-in;
+}
+
+input[type="reset"] {
+  background: rgba(0, 49, 88, 0.85);
+  color: #fff;
+}
+
+input[type="reset"]:hover {
+  background: rgba(0, 49, 88);
+  color: #fff;
+  transform: scale(1.1);
 }
 
 input[type="submit"]:hover {
@@ -220,4 +232,55 @@ input[type="submit"].btn-guess {
   header.hero nav h3 {
     margin-bottom: 1rem;
   }
+}
+
+/* QUIZ */
+.triangle-quiz-section {
+  margin: auto;
+  text-align: left;
+  width: 90%;
+}
+.triangle-quiz-section form {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.triangle-quiz-section .question-menu {
+  margin: 2rem auto 1rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.quiz-score {
+  background: #fff;
+  color: navy;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 1rem;
+}
+
+.quiz-output {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.triangle-quiz-section ol {
+  list-style-position: inside;
+}
+
+.triangle-quiz-section ol li {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.option-wrapper {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  margin: 1rem 0 1rem 1rem;
+}
+
+.option-wrapper label {
+  margin-left: 0.5rem;
 }

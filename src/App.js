@@ -6,12 +6,15 @@ import { FindHypotenuse } from "./FindHypotenuse";
 import { FindArea } from "./FindArea";
 import { ThirdAngle } from "./ThirdAngle";
 import { Footer } from "./Footer";
+// import { TriangleType } from "./TriangleType";
+import { TriangleQuiz } from "./TriangleQuiz";
 
 const userMenu = {
   "Is Valid Triangle?": <Angles />,
   "Find Hypotenuse": <FindHypotenuse />,
   "Find Area": <FindArea />,
-  "Guess Third Angle": <ThirdAngle />
+  "Guess Third Angle": <ThirdAngle />,
+  "Triangle Quiz": <TriangleQuiz />
 };
 
 export default function App() {
