@@ -13,13 +13,15 @@ function Angles() {
   function handleCheck(e) {
     setPlaying(true);
 
-    console.log(playing, checkTriangle);
+    // console.log(playing, checkTriangle);
     e.preventDefault();
-    console.log(parseInt(angleOne) + parseInt(angleTwo) + parseInt(angleThree));
-    if (
-      parseInt(angleOne) + parseInt(angleTwo) + parseInt(angleThree) !==
-      180
-    ) {
+    const totalAngles =
+      Number(angleOne) + Number(angleTwo) + Number(angleThree);
+
+    console.log(Number(angleOne), Number(angleTwo), Number(angleThree));
+    console.log(Number(angleOne) + Number(angleTwo) + Number(angleThree));
+
+    if (totalAngles !== 180) {
       setCheckTriangle(false);
     } else {
       setCheckTriangle(true);
@@ -50,7 +52,8 @@ function Angles() {
             className="angleOne"
             id="angleOne"
             name="angleOne"
-            min="1"
+            min="0.01"
+            step="0.01"
             max="180"
             required
             placeholder="First Angle"
@@ -61,7 +64,8 @@ function Angles() {
             className="angleTwo"
             id="angleTwo"
             name="angleTwo"
-            min="1"
+            min="0.01"
+            step="0.01"
             max="180"
             required
             placeholder="Second Angle"
@@ -72,7 +76,8 @@ function Angles() {
             className="angleThree"
             id="angleThree"
             name="angleThree"
-            min="1"
+            min="0.01"
+            step="0.01"
             max="180"
             required
             placeholder="Third Angle"
