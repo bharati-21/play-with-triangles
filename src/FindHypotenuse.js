@@ -33,8 +33,8 @@ function FindHypotenuse() {
             className="sideA"
             id="sideA"
             name="sideA"
-            min="1"
-            max="180"
+            min="0.0001"
+            step="0.00001"
             required
             placeholder="Base"
             onChange={(e) => setSideA(e.target.value)}
@@ -44,8 +44,8 @@ function FindHypotenuse() {
             className="sideB"
             id="sideB"
             name="sideB"
-            min="1"
-            max="180"
+            min="0.0001"
+            step="0.00001"
             required
             placeholder="Perpendicular"
             onChange={(e) => setSideB(e.target.value)}
@@ -65,8 +65,6 @@ function FindHypotenuse() {
               readOnly
               id="hypotenuse"
               name="hypotenuse"
-              min="1"
-              max="180"
               value={hypotenuse}
               onChange={(e) => setHypotenuse(e.target.value)}
               required

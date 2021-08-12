@@ -28,8 +28,8 @@ function FindArea() {
             className="height"
             id="height"
             name="height"
-            min="1"
-            max="180"
+            min="0.0001"
+            step="0.00001"
             required
             placeholder="Height"
             onChange={(e) => setHeight(e.target.value)}
@@ -39,8 +39,8 @@ function FindArea() {
             className="base"
             id="base"
             name="base"
-            min="1"
-            max="180"
+            min="0.0001"
+            step="0.00001"
             required
             placeholder="Base"
             onChange={(e) => setBase(e.target.value)}

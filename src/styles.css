@@ -97,6 +97,11 @@ a {
   display: inline-block;
   margin: 0.5rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero > .user-menu > .tab:hover {
+  transform: scale(0.9);
 }
 
 .main {
@@ -164,7 +169,8 @@ input[type="submit"]:hover {
 
 input.hypotenuse {
   display: block;
-  max-width: 250px;
+  min-width: 250px;
+  text-align: center;
   margin: 0.5rem auto;
 }
 

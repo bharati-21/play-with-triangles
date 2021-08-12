@@ -16,7 +16,7 @@ function ThirdAngle() {
   function handleCheck(e) {
     setGuessed(true);
     e.preventDefault();
-    if (Number.parseInt(angleThree) === correctAngle) {
+    if (Number(angleThree) === correctAngle) {
       setCheckTriangle(true);
     } else {
       setCheckTriangle(false);
@@ -28,20 +28,21 @@ function ThirdAngle() {
     setGuessed(false);
     setAngleThree("");
 
-    let aOne = Math.floor(Math.random() * 180) + 1;
-    let aTwo = Math.floor(Math.random() * 180) + 1;
+    let aOne = Number((Math.random() * 180 + 1).toFixed(2));
+    let aTwo = Number((Math.random() * 180 + 1).toFixed(2));
 
-    while (aOne + aTwo >= 180) {
+    while (Math.round(aOne + aTwo) >= 180) {
       if (aOne > aTwo) {
-        aOne = Math.floor(Math.random() * 180) + 1;
+        aOne = Number((Math.random() * 180 + 1).toFixed(2));
       } else {
-        aTwo = Math.floor(Math.random() * 100) + 1;
+        aTwo = Number((Math.random() * 180 + 1).toFixed(2));
       }
     }
-    console.log(aOne, aTwo);
     setAngleOne(aOne);
     setAngleTwo(aTwo);
-    setCorrectAngle(180 - (aOne + aTwo));
+    console.log(aOne, aTwo);
+    // console.log((180 - (aOne + aTwo)).toFixed(2));
+    setCorrectAngle(Number((180.0 - (aOne + aTwo)).toFixed(2)));
   }
 
   return (
@@ -57,7 +58,8 @@ function ThirdAngle() {
             className="angleOne"
             id="angleOne"
             name="angleOne"
-            min="1"
+            min="0.0001"
+            step="0.00001"
             max="180"
             required
             placeholder="First Angle"
@@ -70,7 +72,8 @@ function ThirdAngle() {
             className="angleTwo"
             id="angleTwo"
             name="angleTwo"
-            min="1"
+            min="0.0001"
+            step="0.00001"
             max="180"
             required
             placeholder="Second Angle"
@@ -93,7 +96,8 @@ function ThirdAngle() {
                 className="angleThreeGuess"
                 id="angleThreeGuess"
                 name="angleThreeGuess"
-                min="1"
+                min="0.0001"
+                step="0.00001"
                 max="180"
                 required
                 value={angleThree}
