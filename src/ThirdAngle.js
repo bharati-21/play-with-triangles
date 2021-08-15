@@ -16,7 +16,7 @@ function ThirdAngle() {
   function handleCheck(e) {
     setGuessed(true);
     e.preventDefault();
-    if (Number(angleThree) === correctAngle) {
+    if (Number(angleThree) === Number(correctAngle)) {
       setCheckTriangle(true);
     } else {
       setCheckTriangle(false);
@@ -28,21 +28,32 @@ function ThirdAngle() {
     setGuessed(false);
     setAngleThree("");
 
-    let aOne = Number((Math.random() * 180 + 1).toFixed(2));
-    let aTwo = Number((Math.random() * 180 + 1).toFixed(2));
+    let aOne = Math.floor(Math.random() * 180) + 1;
+    let aTwo = Math.floor(Math.random() * 180) + 1;
 
-    while (Math.round(aOne + aTwo) >= 180) {
+    while (aOne + aTwo >= 180) {
       if (aOne > aTwo) {
-        aOne = Number((Math.random() * 180 + 1).toFixed(2));
+        aOne = Math.floor(Math.random() * 180) + 1;
       } else {
-        aTwo = Number((Math.random() * 180 + 1).toFixed(2));
+        aTwo = Math.floor(Math.random() * 180) + 1;
       }
     }
+
+    // let aOne = Number((Math.random() * 180 + 1).toFixed(2));
+    // let aTwo = Number((Math.random() * 180 + 1).toFixed(2));
+
+    // while (Math.round(aOne + aTwo) >= 180) {
+    //   if (aOne > aTwo) {
+    //     aOne = Number((Math.random() * 180 + 1).toFixed(2));
+    //   } else {
+    //     aTwo = Number((Math.random() * 180 + 1).toFixed(2));
+    //   }
+    // }
     setAngleOne(aOne);
     setAngleTwo(aTwo);
     console.log(aOne, aTwo);
     // console.log((180 - (aOne + aTwo)).toFixed(2));
-    setCorrectAngle(Number((180.0 - (aOne + aTwo)).toFixed(2)));
+    setCorrectAngle(180 - (aOne + aTwo));
   }
 
   return (
@@ -96,8 +107,8 @@ function ThirdAngle() {
                 className="angleThreeGuess"
                 id="angleThreeGuess"
                 name="angleThreeGuess"
-                min="0.0001"
-                step="0.00001"
+                min="0.01"
+                step="0.01"
                 max="180"
                 required
                 value={angleThree}
