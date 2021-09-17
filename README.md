@@ -2,7 +2,7 @@
 A fun application created using ReactJS that tests your knowledge of triangles, areas, properties, and their types!
 
 ### This application tests users knowledge of triangles and it's types.
-Live demo of the application: https://bharati-play-with-triangles.netlify.app/
+[Live demo of the application](https://bharati-play-with-triangles.netlify.app/)
 <hr />
 
 ## PREREQUISITES
