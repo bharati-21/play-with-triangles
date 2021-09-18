@@ -16,7 +16,7 @@ function FindHypotenuse() {
 
     const sum = baseSquare + perpSquare;
 
-    const hyp = Math.sqrt(sum);
+    const hyp = (Math.sqrt(sum)).toFixed(2);
     setHypotenuse(hyp);
     e.preventDefault();
   }
