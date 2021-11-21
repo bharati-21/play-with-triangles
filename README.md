@@ -28,12 +28,13 @@ A fun application created using ReactJS that tests your knowledge of triangles, 
 <hr />
 
 ## My Learnings
-- Hooks
-- States
+- My key takeaway was developing an understanding of how multiple states are managed in an application. I also learned how to create dynamic user menu options.
+- An understanding of hooks and state management
 
 
 <hr />
 
 ## Challenges
--  Handling states of answers in quiz, and resetting the state when user changes answers or retakes the quiz.
+- One major challenege I faced was handling states for the user's answers to questions, and resetting the state when user changes answers or retakes the quiz.
+- Another challenge was adding styles to specific questions that user answered incorrectly or answered correctly. Since DOM selectors could not be used, I realized this could be solved by styling elements using classes.
 
