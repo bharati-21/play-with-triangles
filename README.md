@@ -6,7 +6,7 @@ A fun application created using ReactJS that tests your knowledge of triangles, 
 
 <hr />
 
-## PREREQUISITES
+## TECHNOLOGIES/ LANGUAGES USED
 * HTML
 * CSS
 * JavaScript
