@@ -3,6 +3,7 @@ A fun application created using ReactJS that tests your knowledge of triangles, 
 
 ### This application tests users knowledge of triangles and it's types.
 [Live demo of the application](https://bharati-play-with-triangles.netlify.app/)
+
 <hr />
 
 ## PREREQUISITES
@@ -21,6 +22,8 @@ A fun application created using ReactJS that tests your knowledge of triangles, 
    4. Guess the third angle of a triangle for the two auto generated angles.
    5. Quiz on triangles that tests your knowledge on equilateral, scalene, isosceles triangles, obtuse and acute angle in triangles.
 2. The user can choose any of the tab and input values accordingly.
+
+![https://github.com/bharati-21/play-with-triangles/blob/main/play-with-triangles-app.PNG](Image of the application)
 
 <hr />
 
